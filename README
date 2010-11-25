@@ -1,0 +1,11 @@
+= cookbooks
+
+Collection of chef cookbooks
+
+This is WORK IN PROGRESS!
+All versions <1.0.0 should be treated as development and unstable versions. 
+Use on your OWN RISK!
+
+== Copyright
+
+See LICENSE and NOTICE.
