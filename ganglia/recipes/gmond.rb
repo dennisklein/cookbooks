@@ -47,5 +47,5 @@ end
 
 service "gmond" do
   supports :restart => true, :status => true
-  action :enable      
+  action [ :enable, :start ]      
 end  
