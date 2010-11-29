@@ -1,14 +1,14 @@
-= DESCRIPTION:
+# DESCRIPTION:
 
 Generates /etc/hosts from all nodes known by chef. Enables hostname resolving
 between your chef-managed nodes without external DNS.
 
-= TODO:
+# TODO:
 
  * Configure node search query through attribute
  * Add IPv6 support 
 
-= USAGE:
+# USAGE:
 
 recipe[hosts]
 

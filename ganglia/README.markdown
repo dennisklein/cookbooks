@@ -1,10 +1,10 @@
-= DESCRIPTION:
+# DESCRIPTION:
 
 Compiles and installs Ganglia 1.3.7. Will compile and install RRDTools 1.4.4 
 as a dependency too.
 
-** NOTE: This will compile gmetad and install dependencies for gmetad on all nodes, even if only
-** gmond is enabled. I will probably change this in a later version.
+**NOTE**: This will compile gmetad and install dependencies for gmetad on all nodes, even if only
+gmond is enabled. I will probably change this in a later version.
 
 Ganglia default metrics will be enabled.
 
@@ -12,16 +12,16 @@ Ganglia allows many different setups. This cookbook supports the following setup
 
 "unicast non-tiered single-cluster"
 
-     *------*
-     |gmetad|   ...                  role "ganglia_collector"
-     |gmond |             
-     *------*----------*
-       |  |            |
-       |  *---*        |
-       |      |        |
-  *-----*  *-----*  *-----*
-  |gmond|  |gmond|  |gmond|  ...     role "ganglia_agent"
-  *-----*  *-----*  *-----*
+       *------*
+       |gmetad|   ...                  role "ganglia_collector"
+       |gmond |  
+       *------*----------*
+         |  |            |
+         |  *---*        |
+         |      |        |
+    *-----*  *-----*  *-----*
+    |gmond|  |gmond|  |gmond|  ...     role "ganglia_agent"
+    *-----*  *-----*  *-----*
 
 Hosts with the role ganglia_agent will run a gmond which reports in unicast-mode
 to all hosts with role ganglia_collector. Hosts with role ganglia_collector run
@@ -34,28 +34,28 @@ I will add this, if I need such a setup.
 
 See ATTRIBUTES and USAGE for further details.
 
-= REQUIREMENTS:
+# REQUIREMENTS:
 
 Operating Systems (I have tested on):
- - Debian 5
- - Scientific Linux 5.5
+ * Debian 5
+ * Scientific Linux 5.5
 Should easily be adapted to other Red Hat and Debian based systems.
 
 Dependencies (installed via OS package management by this cookbook):
- - APR
- - libconfuse
- - Expat
- - Python
- - PCRE3
- - Pango
- - libxml2
+ * APR
+ * libconfuse
+ * Expat
+ * Python
+ * PCRE3
+ * Pango
+ * libxml2
 
- - A standard C toolchain with make and configure.
+ * A standard C toolchain with make and configure.
 
-= ATTRIBUTES: 
+# ATTRIBUTES: 
 
 See example roles in roles/.
 
-= USAGE:
+# USAGE:
 
 Create roles "ganglia_collector" and "ganglia_agent". See roles/ for examples.
