@@ -37,20 +37,20 @@ See ATTRIBUTES and USAGE for further details.
 # REQUIREMENTS:
 
 Operating Systems (I have tested on):
- * Debian 5
- * Scientific Linux 5.5
+* Debian 5
+* Scientific Linux 5.5
 Should easily be adapted to other Red Hat and Debian based systems.
 
 Dependencies (installed via OS package management by this cookbook):
- * APR
- * libconfuse
- * Expat
- * Python
- * PCRE3
- * Pango
- * libxml2
+* APR
+* libconfuse
+* Expat
+* Python
+* PCRE3
+* Pango
+* libxml2
 
- * A standard C toolchain with make and configure.
+* A standard C toolchain with make and configure.
 
 # ATTRIBUTES: 
 
