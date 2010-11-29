@@ -4,7 +4,7 @@ Compiles and installs Ganglia 1.3.7. Will compile and install RRDTools 1.4.4
 as a dependency too.
 
 ** NOTE: This will compile gmetad and install dependencies for gmetad on all nodes, even if only
-         gmond is enabled. I will probably change this in a later version.
+** gmond is enabled. I will probably change this in a later version.
 
 Ganglia default metrics will be enabled.
 
@@ -12,16 +12,16 @@ Ganglia allows many different setups. This cookbook supports the following setup
 
 "unicast non-tiered single-cluster"
 
-   *------*
-   |gmetad|   ...                  role "ganglia_collector"
-   |gmond |             
-   *------*----------*
-     |  |            |
-     |  *---*        |
-     |      |        |
-*-----*  *-----*  *-----*
-|gmond|  |gmond|  |gmond|  ...     role "ganglia_agent"
-*-----*  *-----*  *-----*
+     *------*
+     |gmetad|   ...                  role "ganglia_collector"
+     |gmond |             
+     *------*----------*
+       |  |            |
+       |  *---*        |
+       |      |        |
+  *-----*  *-----*  *-----*
+  |gmond|  |gmond|  |gmond|  ...     role "ganglia_agent"
+  *-----*  *-----*  *-----*
 
 Hosts with the role ganglia_agent will run a gmond which reports in unicast-mode
 to all hosts with role ganglia_collector. Hosts with role ganglia_collector run
