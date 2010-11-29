@@ -52,8 +52,8 @@ Dependencies (installed via OS package management by this cookbook):
 * PCRE3
 * Pango
 * libxml2
-
-* A standard C toolchain with make and configure.
+* gcc
+* make
 
 # ATTRIBUTES: 
 
