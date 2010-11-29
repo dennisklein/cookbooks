@@ -1,0 +1,44 @@
+#! /bin/sh
+#
+# gmetad    This script will start and stop the Ganglia Monitor Meta-Daemon
+#
+# chkconfig: 345 20 80
+# description: Ganglia is a cluster performance monitoring system
+#
+# Source the library functions
+. /etc/rc.d/init.d/functions
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/opt/ganglia-3.1.7/sbin/gmetad
+NAME=gmetad
+DESC="Ganglia Monitor Meta-Daemon"
+
+test -x $DAEMON || exit 0
+
+case "$1" in
+  start)
+        echo -n "Starting $DESC: "
+        daemon $DAEMON
+        echo
+        ;;
+  stop)
+        echo -n "Stopping $DESC: "
+        killproc $DAEMON
+        echo
+        ;;
+  status)
+        status $DAEMON
+        ;;
+  restart)
+        $0 stop
+        $0 start
+        ;;
+  *)
+        N=/etc/init.d/$NAME
+        echo "Usage: $N {start|stop|status|restart}" >&2
+        exit 1
+        ;;
+esac
+
+exit $?
+
